@@ -1,59 +1,13 @@
 <template>
-  <h1>{{ message }}</h1>
-  <img v-bind:src="imageUrl" alt="" />
-  <br />
+  <div>
 
-  <img :src="imageUrl" alt="" />
-
-  <button @click="changeImg">Change image</button>
-  <hr>
-
-  <input type="text" :value="defaultInputText" />
-  <hr>
-  <p :class="className">Harry Potter</p>
-
-  <p :class="{inactive: isInactive, center: isCenter}">Harry Potter</p>
-
-  <p :class="['active', 'center']">Harry Potter</p>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-let message = "Hello Vue 3! v-bind";
-
-let imageUrl = ref('/public/img/banner_1.png');
-
-function changeImg() {
-  imageUrl.value =
-    imageUrl.value === '/public/img/banner_1.png'
-      ? '/public/img/banner_2.png'
-      : '/public/img/banner_1.png';
-}
-
-let defaultInputText = "Type here...";
-let className = 'active'
-
-let isInactive = ref(true);
-let isCenter = ref(false);
 
 </script>
 
-<style scoped>
-img {
-  max-width: 300px;
-}
+<style lang="scss" scoped>
 
-.active {
-  color: green;
-}
-
-.inactive {
-  color: red;
-  text-decoration: line-through;
-}
-
-.center {
-  text-align: center;
-}
 </style>
